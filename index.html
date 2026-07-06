@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Irmak Ertaş | Portfolio</title>
+  <meta name="description"
+    content="Akdeniz Üniversitesi Yönetim Bilişim Sistemleri 3. sınıf öğrencisi Irmak Ertaş'ın kişisel portfolio web sitesi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">irmak.dev</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+        <li><a href="#skills" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
+        <li><a href="#education" data-tr="Eğitim" data-en="Education">Eğitim</a></li>
+        <li><a href="#projects" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+        <li><a href="#certificates" data-tr="Sertifikalar" data-en="Certificates">Sertifikalar</a></li>
+        <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+      </ul>
+      <div class="nav-controls">
+        <!-- Language Toggle -->
+        <button class="lang-toggle" id="langToggle" aria-label="Language toggle" title="Change language">
+          <span class="lang-active" id="langLabel">TR</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-inactive">EN</span>
+        </button>
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge" data-tr="👋 Merhaba, ben" data-en="👋 Hello, I'm">👋 Merhaba, ben</div>
+        <h1 class="hero-name">Irmak <span class="gradient-text">Ertaş</span></h1>
+        <div class="hero-typewriter">
+          <span id="typewriter-text"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-desc"
+          data-tr="Akdeniz Üniversitesi Yönetim Bilişim Sistemleri 3. sınıf öğrencisiyim. Teknolojiyi, veriyi ve tasarımı bir araya getiren projeler geliştiriyorum."
+          data-en="I'm a 3rd year Management Information Systems student at Akdeniz University, building projects that blend technology, data, and design.">
+          Akdeniz Üniversitesi Yönetim Bilişim Sistemleri 3. sınıf öğrencisiyim. Teknolojiyi, veriyi ve tasarımı bir
+          araya getiren projeler geliştiriyorum.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary" data-tr="Projelerimi Gör" data-en="View My Projects">Projelerimi
+            Gör</a>
+          <a href="#contact" class="btn btn-secondary" data-tr="İletişime Geç" data-en="Get In Touch">İletişime Geç</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">3+</span>
+            <span class="stat-label" data-tr="Yıl Kodlama" data-en="Years Coding">Yıl Kodlama</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">5+</span>
+            <span class="stat-label" data-tr="Tamamlanan Proje" data-en="Projects Done">Tamamlanan Proje</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">1</span>
+            <span class="stat-label" data-tr="Play Store Uygulama" data-en="Play Store App">Play Store Uygulama</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-wrapper">
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-ring ring-3"></div>
+          <div class="avatar-img-container">
+            <img src="assets/profile.png" alt="Irmak Ertaş" class="avatar-img" id="profileImg" />
+          </div>
+          <div class="floating-badge badge-1">
+            <span>🎓</span>
+            <span data-tr="AKÜ YBS" data-en="AU MIS">AKÜ YBS</span>
+          </div>
+          <div class="floating-badge badge-2">
+            <span>📱</span>
+            <span data-tr="Play Store'da!" data-en="On Play Store!">Play Store'da!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-tr="Hakkımda" data-en="About Me">Hakkımda</span>
+        <h2 class="section-title" data-tr="Beni Tanıyın" data-en="Get to Know Me">Beni <span
+            class="gradient-text">Tanıyın</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-tr="Merhaba! Ben Irmak Ertaş. Akdeniz Üniversitesi Yönetim Bilişim Sistemleri bölümünde 3. sınıf öğrencisiyim. Web geliştirme ve mobil uygulama geliştirme alanlarında kendimi geliştiriyorum."
+            data-en="Hi! I'm Irmak Ertaş. I'm a 3rd year Management Information Systems student at Akdeniz University. I'm developing myself in web development, and mobile app development.">
+            Merhaba! Ben Irmak Ertaş. Akdeniz Üniversitesi Yönetim Bilişim Sistemleri bölümünde 3. sınıf öğrencisiyim.
+            Web geliştirme ve mobil uygulama geliştirme alanlarında kendimi geliştiriyorum.
+          </p>
+          <p data-tr="Teknolojiyi ve veriyi kullanarak gerçek dünya sorunlarına çözümler üretmeyi seviyorum. Play Store'da yayınlanmış bir uygulamam mevcut ve birden fazla web projesi geliştirdim."
+            data-en="I love using technology and data to solve real-world problems. I have a published app on the Play Store and have developed multiple web projects.">
+            Teknolojiyi ve veriyi kullanarak gerçek dünya sorunlarına çözümler üretmeyi seviyorum. Play Store'da
+            yayınlanmış bir uygulamam mevcut ve birden fazla web projesi geliştirdim.
+          </p>
+          <p data-tr="" data-en="">
+
+          </p>
+          <div class="about-info-cards">
+            <div class="info-card">
+              <span class="info-icon">🎓</span>
+              <div>
+                <span class="info-label" data-tr="Üniversite" data-en="University">Üniversite</span>
+                <span class="info-value">Akdeniz Üniversitesi</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">📚</span>
+              <div>
+                <span class="info-label" data-tr="Bölüm" data-en="Department">Bölüm</span>
+                <span class="info-value" data-tr="Yönetim Bilişim Sistemleri"
+                  data-en="Management Information Systems">Yönetim Bilişim Sistemleri</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">📍</span>
+              <div>
+                <span class="info-label" data-tr="Konum" data-en="Location">Konum</span>
+                <span class="info-value">Antalya, Türkiye</span>
+              </div>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🎯</span>
+              <div>
+                <span class="info-label" data-tr="Sınıf" data-en="Year">Sınıf</span>
+                <span class="info-value" data-tr="3. Sınıf" data-en="3rd Year">3. Sınıf</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-visual">
+          <div class="code-card">
+            <div class="code-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-filename">about_irmak.js</span>
+            </div>
+            <pre class="code-body"><code><span class="c-purple">const</span> <span class="c-blue">irmak</span> = {
+  <span class="c-green">name</span>: <span class="c-yellow">"Irmak Ertaş"</span>,
+  <span class="c-green">university</span>: <span class="c-yellow">"Akdeniz Üniversitesi"</span>,
+  <span class="c-green">department</span>: <span class="c-yellow">"YBS"</span>,
+  <span class="c-green">year</span>: <span class="c-orange">3</span>,
+  <span class="c-green">location</span>: <span class="c-yellow">"Antalya, TR 🌊"</span>,
+  <span class="c-green">skills</span>: [
+    <span class="c-yellow">"HTML & CSS"</span>,
+    <span class="c-yellow">"JavaScript"</span>,
+    <span class="c-yellow">"React"</span>,
+    <span class="c-yellow">"Firebase"</span>,
+    <span class="c-yellow">"SQL"</span>,
+    <span class="c-yellow">"LibGDX"</span>,
+    <span class="c-yellow">"Java"</span>,
+    <span class="c-yellow">"Kotlin"</span>,
+    <span class="c-yellow">"Android Studio"</span>
+  ],
+  <span class="c-green">passions</span>: [
+    <span class="c-yellow">"Web Dev"</span>,
+    <span class="c-yellow">"Mobile Apps"</span>
+  ],
+  <span class="c-green">available</span>: <span class="c-orange">true</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-tr="Neler Biliyorum" data-en="What I Know">Neler Biliyorum</span>
+        <h2 class="section-title" data-tr="Yeteneklerim" data-en="My Skills">Yetene<span
+            class="gradient-text">klerim</span></h2>
+      </div>
+      <div class="skills-grid">
+
+        <!-- HTML & CSS — 3 proje, temel web, güçlü -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#e34c26">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M4 0l1.5 17 6.5 2 6.5-2L20 0H4zm13.3 5.3l-.3 3H9l.2 2.3h7.6l-.8 8.5-4 1.1-4-1.1-.3-3.3h2.5l.1 1.5 1.7.5 1.7-.5.2-2.5H6.8L6 5.3h11.3z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">HTML &amp; CSS</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:82%;--c:#e34c26"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- JavaScript — 3 proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#f7df1e">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">JavaScript</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:70%;--c:#f7df1e"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- React / Vue.js — 3 proje, framework daha zor -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#61dafb">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09c.735 0 1.445.416 1.445 3.354 0 .92-.108 1.937-.311 2.993a18.85 18.85 0 0 0-.427-.064 30.19 30.19 0 0 0-.951-.096 29.23 29.23 0 0 0-1.463-.058c-.468-.713-.962-1.4-1.487-2.046.553-.558 1.097-1.06 1.617-1.489 1.036-.861 1.99-1.594 1.577-1.594zm-10.56 0c-.413 0-.76.222-.76.22 0 0 .54.733 1.577 1.594.52.43 1.064.931 1.617 1.49-.525.645-1.02 1.332-1.487 2.044-.525.015-1.008.038-1.463.059-.318.014-.638.034-.951.096a18.85 18.85 0 0 0-.427.064c-.203-1.056-.31-2.073-.31-2.993 0-2.938.71-3.354 1.445-3.354zm5.307 3.99c.289.003.578.013.865.027a29.41 29.41 0 0 1 .77.066 23.6 23.6 0 0 1-.771.066 29.41 29.41 0 0 1-.864.027zm3.483 1.648a32.23 32.23 0 0 1 .627 1.127c-.206.016-.414.03-.624.042a35.7 35.7 0 0 0-.003-1.17zm-6.966 0c0 .392-.003.784 0 1.17-.21-.012-.418-.026-.624-.042.182-.38.393-.757.624-1.128zm9.726 1.584c.186.352.36.705.52 1.056a20.01 20.01 0 0 1-.874.256c-.17-.356-.35-.71-.541-1.06.31-.083.607-.166.895-.252zm-12.485 0c.288.086.585.169.895.252-.19.35-.37.704-.54 1.06a20.01 20.01 0 0 1-.874-.256c.16-.351.334-.704.52-1.056zM12 15.71c.438 0 .869-.012 1.294-.034-.416.672-.84 1.28-1.294 1.8-.454-.52-.878-1.128-1.294-1.8.425.022.856.034 1.294.034z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">React / Vue.js</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:62%;--c:#61dafb"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQL — YBS öğrencisi, ders + proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#336791">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.128 0a10.134 10.134 0 0 0-2.755.403l-.063.02A10.922 10.922 0 0 0 12.6.258C11.422.238 10.41.524 9.594 1.101L9.5 1.166C7.5 1.35 5.633 2.295 4.24 3.646 2.495 5.38 1.52 7.624 1.47 9.94c-.055 2.048.52 3.874 1.662 5.272.59.72 1.613 1.58 2.7 1.728.438.07.81-.04 1.08-.298a.87.87 0 0 0 .35-.598l.008-.078c.118-1.286-.044-2.187-.186-3.006-.11-.632-.21-1.226-.18-1.924.072-1.816 1.42-3.23 3.026-3.23.37 0 .744.07 1.106.202 1.03.381 1.754 1.283 1.95 2.374.14.779.067 1.54-.09 2.18-.312 1.24-.343 2.335-.104 3.355.09.37.318 1.2 1.102 1.588.44.22.91.27 1.36.15.775-.21 1.36-.89 1.77-2.016.343-.958.507-2.03.507-3.26 0-1.466-.39-2.82-1.11-3.82a5.077 5.077 0 0 0-.925-1.002c.326-.024.66-.035 1-.035.877 0 1.743.126 2.58.375 3.04.892 4.75 3.597 4.75 7.55 0 1.84-.364 3.5-1.05 4.84-.617 1.215-1.48 2.14-2.52 2.712a5.18 5.18 0 0 1-2.604.666c-1.26 0-2.516-.463-3.586-1.302-.83-.648-1.428-1.46-1.753-2.406l-.114-.335-.328-.127a3.31 3.31 0 0 0-.637-.164c-.265-.04-.5-.013-.66.076-.225.125-.325.37-.275.656.11.633.455 1.22 1.007 1.745 1.136 1.077 2.656 1.656 4.276 1.656.757 0 1.532-.145 2.264-.432 1.132-.44 2.165-1.21 2.99-2.233C23.59 17.086 24 15.2 24 13.08c0-2.57-.61-4.665-1.815-6.172C20.967 5.36 19.304 4.37 17.128 4.37a7.79 7.79 0 0 0-2.082.28 6.085 6.085 0 0 0-2.95-2.197 6.8 6.8 0 0 0-1.64-.405c.37-.196.776-.34 1.214-.427.723-.143 1.48-.143 2.198-.005 1.263.243 2.37.87 3.194 1.815.835.96 1.29 2.225 1.29 3.64 0 .45-.044.898-.13 1.333a4.15 4.15 0 0 1 .56-.037c.263 0 .52.022.77.065a8.45 8.45 0 0 0 .085-.898c.04-.658.006-1.29-.098-1.874-.26-1.475-1.025-2.73-2.205-3.63A6.67 6.67 0 0 0 17.128 0z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">SQL / Veritabanı</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:78%;--c:#336791"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Excel — YBS öğrencisi, aktif kullanım -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#217346">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7v-4H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.63H7.46L6 11.24l-.38.66-.06.1zM4.4 8.44H2.28L2.26 8h-.01v-.01q0-.43.3-.72.28-.3.71-.3h1.24V8.44zm0 1.5v1.5H2.1l-.03-1.5zm0 3v1.5H2.1l-.03-1.5zm0 3v1.5H2.07c-.41 0-.74-.33-.74-.74v-.76zM22 20.5V17H9v3.5zm0-5V12H9v3.5zm0-5V7H9v3.5zm0-5V2.5H9V5z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">Microsoft Excel</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:100%;--c:#217346"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Java — 2 proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#f89820">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M8.851 18.56s-.917.534.653.714c1.902.218 2.874.187 4.969-.211 0 0 .552.346 1.321.646-4.699 2.013-10.633-.118-6.943-1.149M8.276 15.933s-1.028.761.542.924c2.032.209 3.636.227 6.413-.308 0 0 .384.389.987.602-5.679 1.661-12.007.13-7.942-1.218M13.116 11.475c1.158 1.333-.304 2.533-.304 2.533s2.939-1.518 1.589-3.418c-1.261-1.772-2.228-2.652 3.007-5.688 0-.001-8.216 2.051-4.292 6.573M19.33 20.504s.679.559-.747.991c-2.712.822-11.288 1.069-13.669.033-.856-.373.75-.89 1.254-.998.527-.114.828-.093.828-.093-.953-.671-6.156 1.317-2.643 1.887 9.58 1.553 17.462-.7 14.977-1.82M9.292 13.21s-4.362 1.036-1.544 1.412c1.189.159 3.561.123 5.77-.062 1.806-.152 3.618-.477 3.618-.477s-.637.272-1.098.587c-4.429 1.165-12.986.623-10.522-.568 2.082-1.006 3.776-.892 3.776-.892M17.116 17.584c4.503-2.34 2.421-4.589.968-4.285-.355.074-.515.138-.515.138s.132-.207.385-.297c2.875-1.011 5.086 2.981-.928 4.562 0-.001.07-.062.09-.118M14.401 0s2.494 2.494-2.365 6.33c-3.896 3.077-.888 4.832-.001 6.836-2.274-2.053-3.943-3.858-2.824-5.539 1.644-2.469 6.197-3.665 5.19-7.627M9.734 23.924c4.322.277 10.959-.153 11.116-2.198 0 0-.302.775-3.572 1.391-3.688.694-8.239.613-10.937.168 0-.001.553.457 3.393.639" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">Java</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:64%;--c:#f89820"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Firebase — 3 proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#FFCA28">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3.89 15.672L6.255.461A.542.542 0 0 1 7.27.288l2.543 4.771zm16.794 3.692l-2.25-14a.54.54 0 0 0-.919-.295L3.316 19.365l7.856 4.427a1.621 1.621 0 0 0 1.588 0zM14.3 7.147l-1.82-3.482a.542.542 0 0 0-.96 0L3.53 17.984z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">Firebase</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:66%;--c:#FFCA28"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Android Studio — 2 proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#3DDC84">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.523 15.341a5.322 5.322 0 0 1-5.321 5.322 5.322 5.322 0 0 1-5.321-5.322 5.322 5.322 0 0 1 5.321-5.322 5.322 5.322 0 0 1 5.321 5.322zm1.338 0a6.66 6.66 0 0 0-6.659-6.66 6.66 6.66 0 0 0-6.66 6.66 6.66 6.66 0 0 0 6.66 6.659 6.66 6.66 0 0 0 6.659-6.659zm-13.32 0c0-3.677 2.983-6.66 6.66-6.66s6.66 2.983 6.66 6.66-2.983 6.659-6.66 6.659-6.66-2.982-6.66-6.659zM3.152 7.531L1.6 4.786a.268.268 0 0 1 .099-.366.268.268 0 0 1 .366.099l1.572 2.722a9.615 9.615 0 0 1 4.534-1.131 9.628 9.628 0 0 1 4.535 1.13l1.57-2.72a.267.267 0 0 1 .366-.1.267.267 0 0 1 .099.366L12.79 7.53a9.496 9.496 0 0 1 4.42 5.19H.774a9.495 9.495 0 0 1 2.378-5.189zm6.02-2.842a.66.66 0 0 1-.659.66.66.66 0 0 1-.66-.66.66.66 0 0 1 .66-.659.66.66 0 0 1 .659.66zm5.321 0a.66.66 0 0 1-.659.66.66.66 0 0 1-.659-.66.66.66 0 0 1 .659-.659.66.66 0 0 1 .659.66z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">Android Studio</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:62%;--c:#3DDC84"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kotlin — 1 proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#7F52FF">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 24H0V0h24L12 12z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">Kotlin</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:48%;--c:#7F52FF"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LibGDX — 1 proje -->
+        <div class="skill-card">
+          <div class="skill-icon-wrap" style="--c:#e74c3c">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" />
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-name-row">
+              <span class="skill-name">LibGDX</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--pct:42%;--c:#e74c3c"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-tr="Akademik Geçmişim" data-en="Academic Background">Akademik Geçmişim</span>
+        <h2 class="section-title" data-tr="Eğitim" data-en="Education">Eği<span class="gradient-text">tim</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-badge" data-tr="Devam Ediyor" data-en="In Progress">Devam Ediyor</div>
+            <h3 data-tr="Yönetim Bilişim Sistemleri" data-en="Management Information Systems">Yönetim Bilişim Sistemleri
+            </h3>
+            <p class="timeline-org">Akdeniz Üniversitesi</p>
+            <p class="timeline-date">2024 — 2028</p>
+            <p class="timeline-desc"
+              data-tr="Veri tabanı yönetimi, sistem analizi, yazılım geliştirme, proje yönetimi ve iş zekası alanlarında kapsamlı eğitim alıyorum."
+              data-en="Receiving comprehensive training in database management, system analysis, software development, project management, and business intelligence.">
+              Veri tabanı yönetimi, sistem analizi, yazılım geliştirme, proje yönetimi ve iş zekası alanlarında kapsamlı
+              eğitim alıyorum.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-badge complete" data-tr="Mezun" data-en="Graduated">Mezun</div>
+            <h3 data-tr="Lise Eğitimim" data-en="High School">Lise Eğitimim</h3>
+            <p class="timeline-org">Açık Öğretim</p>
+            <p class="timeline-date">2023 - 2024</p>
+            <p class="timeline-org">Akev Koleji</p>
+            <p class="timeline-date">2020 — 2023</p>
+            <p class="timeline-desc"
+              data-tr="Matematik, Türkçe ve sosyal bilimler alanlarında sağlam bir akademik temel oluşturdum. Üniversite sınavına hazırlanarak Akdeniz Üniversitesi YBS bölümünü kazandım."
+              data-en="Built a strong academic foundation in mathematics, science and social studies. Prepared for university entrance exams and earned a place in Akdeniz University's MIS department.">
+              Matematik, fen ve sosyal bilimler alanlarında sağlam bir akademik temel oluşturdum. Üniversite sınavına
+              hazırlanarak Akdeniz Üniversitesi YBS bölümünü kazandım.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-tr="Neler Yaptım" data-en="What I've Built">Neler Yaptım</span>
+        <h2 class="section-title" data-tr="Projelerim" data-en="My Projects">Projele<span
+            class="gradient-text">rim</span></h2>
+      </div>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all" data-tr="Tümü" data-en="All">Tümü</button>
+        <button class="filter-btn" data-filter="mobile" data-tr="Mobil" data-en="Mobile">Mobil</button>
+        <button class="filter-btn" data-filter="web" data-tr="Web" data-en="Web">Web</button>
+        <button class="filter-btn" data-filter="game" data-tr="Oyun" data-en="Game">Oyun</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- Play Store App -->
+        <div class="project-card" data-category="mobile">
+          <div class="project-img-wrap">
+            <img src="assets/neyesem_logo.png" alt="Ne Yesem? | Tarif Asistanı" class="project-img project-img-contain" />
+            <div class="project-overlay">
+              <a href="https://play.google.com/store/apps/details?id=com.irmakertas.neyesem&amp;pli=1" class="proj-link" id="projLinkPlayStore" data-tr="Play Store'da Gör"
+                data-en="View on Play Store">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span data-tr="Play Store'da Gör" data-en="View on Play Store">Play Store'da Gör</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-mobile">Mobile</span>
+            </div>
+            <h3 class="project-title" data-tr="Ne Yesem? | Tarif Asistanı"
+              data-en="What Should I Eat? | Recipe Assistant">Ne Yesem? | Tarif Asistanı</h3>
+            <p class="project-desc"
+              data-tr="İlk mobil uygulama projem olan 'Ne Yesem?', mutfakta karar vermeyi kolaylaştıran akıllı bir asistan. Kararsız kalanlar için 'Zar At' seçeneğiyle günün menüsünü belirlerken, gelişmiş kamera özelliği sayesinde evdeki malzemeleri taratabiliyor. Uygulama, taranan malzemelerle en çok eşleşen yemek tariflerini uyum oranlarıyla birlikte sunarak kullanıcıya özel bir deneyim sağlıyor."
+              data-en="My first mobile application project, 'Ne Yesem?', is a smart assistant that simplifies decision-making in the kitchen. For those who are undecided, it determines the menu of the day with the 'Roll a Die' option, while its advanced camera feature can scan ingredients at home. The application provides a personalized experience by suggesting recipes that match the scanned ingredients best, along with their compatibility rates.">
+              İlk mobil uygulama projem olan 'Ne Yesem?', mutfakta karar vermeyi kolaylaştıran akıllı bir asistan.
+              Kararsız kalanlar için 'Zar At' seçeneğiyle günün menüsünü belirlerken, gelişmiş kamera özelliği sayesinde
+              evdeki malzemeleri taratabiliyor. Uygulama, taranan malzemelerle en çok eşleşen yemek tariflerini uyum
+              oranlarıyla birlikte sunarak kullanıcıya özel bir deneyim sağlıyor.
+            </p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Android Studio</span>
+              <span>Firebase</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Project 1 -->
+        <div class="project-card" data-category="web">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
+              <span class="proj-emoji">🌐</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link open-modal-btn" id="projLinkWeb1"
+                 data-title-tr="Beta İnşaat Web Projesi"
+                 data-title-en="Beta İnşaat Web Project"
+                 data-desc-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır."
+                 data-desc-en="A dynamic corporate website developed from scratch for Beta İnşaat. It includes a custom-built content management system (admin panel) allowing the company to instantly update their ongoing and completed projects, photo galleries, and corporate information without external dependency."
+                 data-features-tr="Özel Yönetim (Admin) Paneli,Dinamik Proje Ekleme/Düzenleme,Kurumsal Fotoğraf Galerisi,Responsive Tasarım ve SEO Uyumu"
+                 data-features-en="Custom Content Management Panel,Dynamic Project Creation/Editing,Corporate Photo Gallery,Responsive Design & SEO Friendly"
+                 data-tech="HTML,CSS,JavaScript">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span data-tr="Detayları İncele" data-en="Inspect Details">Detayları İncele</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+            </div>
+            <h3 class="project-title" data-tr="Beta İnşaat" data-en="Beta İnşaat">Beta İnşaat Web Projesi</h3>
+            <p class="project-desc"
+              data-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır.."
+              data-en="I developed the website for Beta İnşaat.">
+              Beta İnşaat'ın web sitesi için yaptığım web projesi.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Project 2 -->
+        <div class="project-card" data-category="web">
+          <div class="project-img-wrap">
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg,#4facfe,#00f2fe)">
+              <span class="proj-emoji">💻</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="proj-link open-modal-btn" id="projLinkWeb2"
+                 data-title-tr="Business Hub E-Ticaret Projesi"
+                 data-title-en="Business Hub E-Commerce Project"
+                 data-desc-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
+                 data-desc-en="An e-commerce portfolio application built from scratch to experience full dynamic processes like product listing, shopping cart interactions, and user management. It combines frontend and backend architectures to provide hands-on experience in database integration and state management."
+                 data-features-tr="Dinamik Sepet ve Sipariş Süreçleri,Ürün Arama ve Kategori Filtreleme,Veritabanı Entegrasyonu,Modern State (Durum) Yönetimi"
+                 data-features-en="Dynamic Cart & Checkout Flow,Product Search & Category Filters,Database Integration,Modern State Management"
+                 data-tech="React,Node.js,SQL">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span data-tr="Detayları İncele" data-en="Inspect Details">Detayları İncele</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-web">Web</span>
+            </div>
+            <h3 class="project-title" data-tr="Business Hub" data-en="Business Hub">Business Hub Web Projesi</h3>
+            <p class="project-desc"
+              data-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
+              data-en="My second web project. You can update the title and description to match your project.">
+              Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır.
+            </p>
+            <div class="project-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game Project -->
+        <div class="project-card" data-category="game">
+          <div class="project-img-wrap">
+            <img src="assets/spacesurvivor_preview.jpg" alt="Space Survivor" class="project-img" />
+            <div class="project-overlay">
+              <a href="#" class="proj-link open-modal-btn" id="projLinkGame"
+                 data-title-tr="Space Survivor — 2D Oyun Projesi"
+                 data-title-en="Space Survivor — 2D Game Project"
+                 data-desc-tr="Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu."
+                 data-desc-en="A 2D survival game built using Java and LibGDX framework to master game loop concepts, collision detection mechanisms, real-time score tracking, and persistent high scores. Working close to bare-metal game engine architectures provided deep knowledge of asset loading and game state management."
+                 data-images="assets/spacesurvivor_preview.jpg,assets/spacesurvivor_gameover.jpg"
+                 data-features-tr="Sonsuz Uzay Temalı Hayatta Kalma Döngüsü,Gelişmiş Çarpışma Algılama (Collision Detection),High Score Kayıt ve Yükleme Sistemi,LibGDX Asset Yöneticisi Entegrasyonu"
+                 data-features-en="Infinite Space Survival Loop,Collision Detection System,High Score Serialization,LibGDX Asset Manager Integration"
+                 data-tech="Java,LibGDX">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+                <span data-tr="Detayları İncele" data-en="Inspect Details">Detayları İncele</span>
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag tag-game">Oyun</span>
+            </div>
+            <h3 class="project-title" data-tr="Space Survivor" data-en="Space Survivor">Oyun Projesi</h3>
+            <p class="project-desc"
+              data-tr="Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu."
+              data-en="My game project. You can update the title, description, and screenshot to match your project.">
+              Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu.
+            </p>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>LibGDX</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATES ========== -->
+  <section class="section" id="certificates">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-tr="Başarılarım" data-en="My Achievements">Başarılarım</span>
+        <h2 class="section-title" data-tr="Sertifikalar" data-en="Certificates">Sertifika<span
+            class="gradient-text">lar</span></h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">🏆</div>
+          <div class="cert-info">
+            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
+            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
+            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
+          </div>
+          <a href="#" class="cert-link" id="certLink1" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">📜</div>
+          <div class="cert-info">
+            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
+            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
+            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
+          </div>
+          <a href="#" class="cert-link" id="certLink2" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🎓</div>
+          <div class="cert-info">
+            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
+            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
+            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
+          </div>
+          <a href="#" class="cert-link" id="certLink3" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">⭐</div>
+          <div class="cert-info">
+            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
+            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
+            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
+          </div>
+          <a href="#" class="cert-link" id="certLink4" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-tr="Ulaşın" data-en="Reach Out">Ulaşın</span>
+        <h2 class="section-title" data-tr="İletişim" data-en="Contact">İleti<span class="gradient-text">şim</span></h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <p class="contact-intro"
+            data-tr="Benimle iletişime geçmek mi istiyorsunuz? Aşağıdaki formu doldurabilir ya da sosyal medya üzerinden ulaşabilirsiniz."
+            data-en="Want to get in touch? Fill out the form below or reach me through social media.">
+            Benimle iletişime geçmek mi istiyorsunuz? Aşağıdaki formu doldurabilir ya da sosyal medya üzerinden
+            ulaşabilirsiniz.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" id="socialLinkedIn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+            <a href="#" class="social-btn" id="socialGithub" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+            <a href="#" class="social-btn" id="socialEmail" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              E-posta
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="formName" data-tr="Adınız" data-en="Your Name">Adınız</label>
+              <input type="text" id="formName" name="name" placeholder="Irmak Ertaş" required />
+            </div>
+            <div class="form-group">
+              <label for="formEmail" data-tr="E-posta" data-en="Email">E-posta</label>
+              <input type="email" id="formEmail" name="email" placeholder="ornek@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="formSubject" data-tr="Konu" data-en="Subject">Konu</label>
+            <input type="text" id="formSubject" name="subject" placeholder="Merhaba..." required />
+          </div>
+          <div class="form-group">
+            <label for="formMessage" data-tr="Mesajınız" data-en="Message">Mesajınız</label>
+            <textarea id="formMessage" name="message" rows="5" placeholder="..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span data-tr="Mesaj Gönder" data-en="Send Message">Mesaj Gönder</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copy" data-tr="© 2026 Irmak Ertaş. Tüm hakları saklıdır."
+          data-en="© 2026 Irmak Ertaş. All rights reserved.">© 2026 Irmak Ertaş. Tüm hakları saklıdır.</p>
+        <p class="footer-made" data-tr="❤️ ile yapıldı" data-en="Made with ❤️">❤️ ile yapıldı</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== PROJECT MODAL ========== -->
+  <div class="project-modal" id="projectModal" aria-hidden="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-gallery">
+          <div class="modal-slider" id="modalSlider">
+            <!-- Images will be inserted here dynamically -->
+          </div>
+          <div class="slider-arrows" id="sliderArrows">
+            <button class="slider-arrow prev" id="sliderPrev">&lsaquo;</button>
+            <button class="slider-arrow next" id="sliderNext">&rsaquo;</button>
+          </div>
+        </div>
+        <div class="modal-details">
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+          <div class="modal-tech" id="modalTech">
+            <!-- Tech badges will be inserted here dynamically -->
+          </div>
+          <p class="modal-desc" id="modalDesc">Project description...</p>
+          <div class="modal-features-section">
+            <h4 data-tr="Anahtar Özellikler" data-en="Key Features">Anahtar Özellikler</h4>
+            <ul class="modal-features-list" id="modalFeatures">
+              <!-- Feature items will be inserted here dynamically -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
