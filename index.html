@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 
 <body>
@@ -29,7 +29,6 @@
         <li><a href="#skills" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
         <li><a href="#education" data-tr="Eğitim" data-en="Education">Eğitim</a></li>
         <li><a href="#projects" data-tr="Projeler" data-en="Projects">Projeler</a></li>
-        <li><a href="#certificates" data-tr="Sertifikalar" data-en="Certificates">Sertifikalar</a></li>
         <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
       </ul>
       <div class="nav-controls">
@@ -109,25 +108,25 @@
           </div>
         </div>
       </div>
-      <div class="hero-visual">
+   <div class="hero-visual">
         <div class="avatar-wrapper">
-          <div class="avatar-ring ring-1"></div>
-          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-glow"></div>
+          <div class="avatar-ring ring-1">
+            <span class="orbit-dot dot-1"></span>
+          </div>
+          <div class="avatar-ring ring-2">
+            <span class="orbit-dot dot-2"></span>
+          </div>
           <div class="avatar-ring ring-3"></div>
-          <div class="avatar-img-container">
-            <img src="assets/profile.png" alt="Irmak Ertaş" class="avatar-img" id="profileImg" />
-          </div>
-          <div class="floating-badge badge-1">
-            <span>🎓</span>
-            <span data-tr="AKÜ YBS" data-en="AU MIS">AKÜ YBS</span>
-          </div>
-          <div class="floating-badge badge-2">
-            <span>📱</span>
-            <span data-tr="Play Store'da!" data-en="On Play Store!">Play Store'da!</span>
+          <div class="avatar-img-container popout-container">
+            <div class="popout-circle"></div>
+            <div class="popout-body-wrap">
+              <img src="assets/profile.jpg?v=2" alt="Irmak Ertaş" class="popout-img" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      </div>
     <div class="scroll-indicator">
       <div class="scroll-arrow"></div>
     </div>
@@ -271,7 +270,7 @@
           </div>
         </div>
 
-        <!-- React / Vue.js — 3 proje, framework daha zor -->
+        <!-- React Native — 3 proje -->
         <div class="skill-card">
           <div class="skill-icon-wrap" style="--c:#61dafb">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -281,7 +280,7 @@
           </div>
           <div class="skill-info">
             <div class="skill-name-row">
-              <span class="skill-name">React / Vue.js</span>
+              <span class="skill-name">React Native</span>
             </div>
             <div class="skill-bar">
               <div class="skill-fill" style="--pct:62%;--c:#61dafb"></div>
@@ -307,20 +306,22 @@
           </div>
         </div>
 
-        <!-- Excel — YBS öğrencisi, aktif kullanım -->
+        <!-- Microsoft Office — YBS öğrencisi, aktif kullanım -->
         <div class="skill-card">
-          <div class="skill-icon-wrap" style="--c:#217346">
+          <div class="skill-icon-wrap" style="--c:#d83b01">
             <svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M23 1.5q.41 0 .7.3.3.29.3.7v19q0 .41-.3.7-.29.3-.7.3H7q-.41 0-.7-.3-.3-.29-.3-.7v-4H1q-.41 0-.7-.3-.3-.29-.3-.7V7q0-.41.3-.7Q.58 6 1 6h5V2.5q0-.41.3-.7.29-.3.7-.3zM6 13.28l1.42 2.66h2.14l-2.38-3.87 2.34-3.63H7.46L6 11.24l-.38.66-.06.1zM4.4 8.44H2.28L2.26 8h-.01v-.01q0-.43.3-.72.28-.3.71-.3h1.24V8.44zm0 1.5v1.5H2.1l-.03-1.5zm0 3v1.5H2.1l-.03-1.5zm0 3v1.5H2.07c-.41 0-.74-.33-.74-.74v-.76zM22 20.5V17H9v3.5zm0-5V12H9v3.5zm0-5V7H9v3.5zm0-5V2.5H9V5z" />
+              <rect x="2" y="2" width="9.5" height="9.5" />
+              <rect x="12.5" y="2" width="9.5" height="9.5" />
+              <rect x="2" y="12.5" width="9.5" height="9.5" />
+              <rect x="12.5" y="12.5" width="9.5" height="9.5" />
             </svg>
           </div>
           <div class="skill-info">
             <div class="skill-name-row">
-              <span class="skill-name">Microsoft Excel</span>
+              <span class="skill-name">Microsoft Office</span>
             </div>
             <div class="skill-bar">
-              <div class="skill-fill" style="--pct:100%;--c:#217346"></div>
+              <div class="skill-fill" style="--pct:100%;--c:#d83b01"></div>
             </div>
           </div>
         </div>
@@ -426,7 +427,7 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-tr="Akademik Geçmişim" data-en="Academic Background">Akademik Geçmişim</span>
-        <h2 class="section-title" data-tr="Eğitim" data-en="Education">Eği<span class="gradient-text">tim</span></h2>
+        <h2 class="section-title" data-tr="Eğitim" data-en="Education">Eğitim<span class="gradient-text"></span></h2>
       </div>
       <div class="timeline">
         <div class="timeline-item">
@@ -523,17 +524,16 @@
         <!-- Web Project 1 -->
         <div class="project-card" data-category="web">
           <div class="project-img-wrap">
-            <div class="project-img-placeholder" style="background: linear-gradient(135deg,#f093fb,#f5576c)">
-              <span class="proj-emoji">🌐</span>
-            </div>
+            <img src="assets/beta_hero.png" alt="Beta İnşaat Web Projesi" class="project-img" />
             <div class="project-overlay">
               <a href="#" class="proj-link open-modal-btn" id="projLinkWeb1"
                  data-title-tr="Beta İnşaat Web Projesi"
                  data-title-en="Beta İnşaat Web Project"
                  data-desc-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır."
-                 data-desc-en="A dynamic corporate website developed from scratch for Beta İnşaat. It includes a custom-built content management system (admin panel) allowing the company to instantly update their ongoing and completed projects, photo galleries, and corporate information without external dependency."
+                 data-desc-en="I developed a dynamic corporate website from scratch for Beta Construction, reflecting its professional identity. The project includes a custom-built admin panel enabling the company to instantly update its ongoing and completed projects, photo galleries, and corporate information without external dependency."
                  data-features-tr="Özel Yönetim (Admin) Paneli,Dinamik Proje Ekleme/Düzenleme,Kurumsal Fotoğraf Galerisi,Responsive Tasarım ve SEO Uyumu"
                  data-features-en="Custom Content Management Panel,Dynamic Project Creation/Editing,Corporate Photo Gallery,Responsive Design & SEO Friendly"
+                 data-images="assets/beta_hero.png,assets/beta_about.png,assets/beta_sectors.png,assets/beta_project.png,assets/beta_footer.png,assets/beta_admin_login.png,assets/beta_admin_dashboard.png"
                  data-tech="HTML,CSS,JavaScript">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -550,8 +550,8 @@
             </div>
             <h3 class="project-title" data-tr="Beta İnşaat" data-en="Beta İnşaat">Beta İnşaat Web Projesi</h3>
             <p class="project-desc"
-              data-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır.."
-              data-en="I developed the website for Beta İnşaat.">
+              data-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır."
+              data-en="A dynamic web project I developed from scratch to reflect the corporate identity of Beta İnşaat. As part of the project, I built a custom administration panel that allows the company to update its ongoing and completed projects, photo galleries, and corporate information in real-time without external dependencies. This is a commercial project for which I delivered end-to-end solutions regarding state management, dynamic data flow, and the implementation of a user-friendly content management system.">
               Beta İnşaat'ın web sitesi için yaptığım web projesi.
             </p>
             <div class="project-tech">
@@ -573,7 +573,7 @@
                  data-title-tr="Business Hub E-Ticaret Projesi"
                  data-title-en="Business Hub E-Commerce Project"
                  data-desc-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
-                 data-desc-en="An e-commerce portfolio application built from scratch to experience full dynamic processes like product listing, shopping cart interactions, and user management. It combines frontend and backend architectures to provide hands-on experience in database integration and state management."
+                 data-desc-en="This is a portfolio project I built from scratch to experience the full range of dynamic processes involved in an e-commerce platform, such as product listing, shopping cart interactions, and user management. It is a project where I integrated backend and frontend architectures to gain end-to-end experience in state management and database integration for a real-world web application."
                  data-features-tr="Dinamik Sepet ve Sipariş Süreçleri,Ürün Arama ve Kategori Filtreleme,Veritabanı Entegrasyonu,Modern State (Durum) Yönetimi"
                  data-features-en="Dynamic Cart & Checkout Flow,Product Search & Category Filters,Database Integration,Modern State Management"
                  data-tech="React,Node.js,SQL">
@@ -593,13 +593,14 @@
             <h3 class="project-title" data-tr="Business Hub" data-en="Business Hub">Business Hub Web Projesi</h3>
             <p class="project-desc"
               data-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
-              data-en="My second web project. You can update the title and description to match your project.">
+              data-en="This is a portfolio project I built from scratch to experience the full range of dynamic processes involved in an e-commerce platform, such as product listing, shopping cart interactions, and user management. It is a project where I integrated backend and frontend architectures to gain end-to-end experience in state management and database integration for a real-world web application.">
               Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır.
             </p>
             <div class="project-tech">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>SQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Supabase</span>
             </div>
           </div>
         </div>
@@ -634,9 +635,7 @@
             <h3 class="project-title" data-tr="Space Survivor" data-en="Space Survivor">Oyun Projesi</h3>
             <p class="project-desc"
               data-tr="Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu."
-              data-en="My game project. You can update the title, description, and screenshot to match your project.">
-              Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu.
-            </p>
+              data-en="Space Survivor is the first 2D game project I developed using Java and LibGDX, serving as my introduction to game programming logic. This infinite space-themed survival game features an optimized game loop, collision detection logic, real-time score tracking, and a high-score system. It was a visionary project that allowed me to gain hands-on experience with asset management and in-game state control by building the game engine architecture from scratch.">
             <div class="project-tech">
               <span>Java</span>
               <span>LibGDX</span>
@@ -648,54 +647,7 @@
     </div>
   </section>
 
-  <!-- ========== CERTIFICATES ========== -->
-  <section class="section" id="certificates">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-tr="Başarılarım" data-en="My Achievements">Başarılarım</span>
-        <h2 class="section-title" data-tr="Sertifikalar" data-en="Certificates">Sertifika<span
-            class="gradient-text">lar</span></h2>
-      </div>
-      <div class="certs-grid">
-        <div class="cert-card">
-          <div class="cert-icon">🏆</div>
-          <div class="cert-info">
-            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
-            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
-            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
-          </div>
-          <a href="#" class="cert-link" id="certLink1" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">📜</div>
-          <div class="cert-info">
-            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
-            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
-            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
-          </div>
-          <a href="#" class="cert-link" id="certLink2" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">🎓</div>
-          <div class="cert-info">
-            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
-            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
-            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
-          </div>
-          <a href="#" class="cert-link" id="certLink3" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
-        </div>
-        <div class="cert-card">
-          <div class="cert-icon">⭐</div>
-          <div class="cert-info">
-            <h4 data-tr="[Sertifika Adı]" data-en="[Certificate Name]">[Sertifika Adı]</h4>
-            <p data-tr="[Veren Kurum]" data-en="[Issuing Organization]">[Veren Kurum]</p>
-            <span class="cert-date" data-tr="[Tarih]" data-en="[Date]">[Tarih]</span>
-          </div>
-          <a href="#" class="cert-link" id="certLink4" data-tr="Görüntüle" data-en="View">Görüntüle →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- ========== CONTACT ========== -->
   <section class="section section-alt" id="contact">
@@ -713,26 +665,26 @@
             ulaşabilirsiniz.
           </p>
           <div class="social-links">
-            <a href="#" class="social-btn" id="socialLinkedIn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/irmakertas/" target="_blank" rel="noopener noreferrer" class="social-btn" id="socialLinkedIn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                 <circle cx="4" cy="4" r="2" />
               </svg>
               LinkedIn
             </a>
-            <a href="#" class="social-btn" id="socialGithub" aria-label="GitHub">
+            <a href="https://github.com/iirmakertas" target="_blank" rel="noopener noreferrer" class="social-btn" id="socialGithub" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
               GitHub
             </a>
-            <a href="#" class="social-btn" id="socialEmail" aria-label="Email">
+            <a href="mailto:irmakertas242@gmail.com" class="social-btn" id="socialEmail" aria-label="Email">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              E-posta
+              <span data-tr="E-posta" data-en="Email">E-posta</span>
             </a>
           </div>
         </div>
@@ -785,12 +737,19 @@
       <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
       <div class="modal-body">
         <div class="modal-gallery">
-          <div class="modal-slider" id="modalSlider">
-            <!-- Images will be inserted here dynamically -->
+          <div class="browser-header">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
           </div>
-          <div class="slider-arrows" id="sliderArrows">
-            <button class="slider-arrow prev" id="sliderPrev">&lsaquo;</button>
-            <button class="slider-arrow next" id="sliderNext">&rsaquo;</button>
+          <div class="modal-slider-container">
+            <div class="modal-slider" id="modalSlider">
+              <!-- Images will be inserted here dynamically -->
+            </div>
+            <div class="slider-arrows" id="sliderArrows">
+              <button class="slider-arrow prev" id="sliderPrev">&lsaquo;</button>
+              <button class="slider-arrow next" id="sliderNext">&rsaquo;</button>
+            </div>
           </div>
         </div>
         <div class="modal-details">
@@ -810,7 +769,7 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=12"></script>
 </body>
 
 </html>

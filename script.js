@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillBars();
   initProjectFilter();
   initContactForm();
+  initEmailCopy();
   initNavActiveLinks();
 });
 
@@ -160,17 +161,18 @@ function typeLoop(lang) {
   if (!el) return;
   const texts = lang === 'tr' ? typewriterTextsTR : typewriterTextsEN;
   const current = texts[typeIndex % texts.length];
+  const chars = Array.from(current);
 
   if (!isDeleting) {
-    el.textContent = current.substring(0, charIndex + 1);
+    el.textContent = chars.slice(0, charIndex + 1).join('');
     charIndex++;
-    if (charIndex === current.length) {
+    if (charIndex === chars.length) {
       isDeleting = true;
       typeTimer = setTimeout(() => typeLoop(lang), 2000);
       return;
     }
   } else {
-    el.textContent = current.substring(0, charIndex - 1);
+    el.textContent = chars.slice(0, charIndex - 1).join('');
     charIndex--;
     if (charIndex === 0) {
       isDeleting = false;
@@ -185,7 +187,7 @@ function typeLoop(lang) {
    ====================== */
 function initScrollReveal() {
   // Add reveal class to sections
-  const targets = document.querySelectorAll('.section-header, .about-grid, .skill-card, .timeline-item, .project-card, .cert-card, .contact-wrapper');
+  const targets = document.querySelectorAll('.section-header, .about-grid, .skill-card, .timeline-item, .project-card, .contact-wrapper');
   targets.forEach(el => el.classList.add('reveal'));
 
   const observer = new IntersectionObserver((entries) => {
@@ -257,19 +259,40 @@ function initContactForm() {
     const btn = document.getElementById('submitBtn');
     const isTR = currentLang === 'tr';
 
-    // Simulate sending
     btn.disabled = true;
     btn.innerHTML = `<span>${isTR ? '⏳ Gönderiliyor...' : '⏳ Sending...'}</span>`;
 
-    setTimeout(() => {
+    const formData = new FormData(form);
+    
+    fetch('https://formsubmit.co/ajax/irmakertas242@gmail.com', {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
       btn.innerHTML = `<span>✅ ${isTR ? 'Mesaj Gönderildi!' : 'Message Sent!'}</span>`;
       form.reset();
+    })
+    .catch(error => {
+      console.error(error);
+      btn.innerHTML = `<span>❌ ${isTR ? 'Hata Oluştu!' : 'Error Occurred!'}</span>`;
+    })
+    .finally(() => {
       setTimeout(() => {
         btn.disabled = false;
         btn.innerHTML = `<span data-tr="Mesaj Gönder" data-en="Send Message">${isTR ? 'Mesaj Gönder' : 'Send Message'}</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>`;
       }, 3000);
-    }, 1500);
+    });
   });
 }
 
@@ -303,10 +326,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', (e) => {
     // Only intercept if class does not contain open-modal-btn
     if (anchor.classList.contains('open-modal-btn')) return;
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const href = anchor.getAttribute('href');
+    if (href === '#') return;
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } catch (err) {
+      console.warn('Invalid scroll target:', href);
     }
   });
 });
@@ -390,6 +419,10 @@ function initProjectModal() {
           const img = document.createElement('img');
           img.src = src;
           img.alt = mTitle.textContent;
+          img.style.width = '100%';
+          img.style.height = 'auto';
+          img.style.display = 'block';
+          img.style.objectFit = 'normal';
           mSlider.appendChild(img);
         });
         mArrows.style.display = currentImages.length > 1 ? 'flex' : 'none';
@@ -398,6 +431,10 @@ function initProjectModal() {
         const img = document.createElement('img');
         img.src = 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600';
         img.alt = 'Placeholder';
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        img.style.display = 'block';
+        img.style.objectFit = 'normal';
         mSlider.appendChild(img);
         mArrows.style.display = 'none';
       }
@@ -450,4 +487,63 @@ function initProjectModal() {
       closeModal();
     }
   });
+}
+
+/* ======================
+   EMAIL COPY TO CLIPBOARD
+   ====================== */
+function initEmailCopy() {
+  const emailBtn = document.getElementById('socialEmail');
+  if (!emailBtn) return;
+
+  emailBtn.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default link navigation behavior
+    const email = 'irmakertas242@gmail.com';
+    
+    // Attempt copy using clipboard API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email)
+        .then(() => {
+          showFeedback();
+          window.location.href = 'mailto:' + email;
+        })
+        .catch(err => {
+          console.error('Could not copy email: ', err);
+          window.location.href = 'mailto:' + email;
+        });
+    } else {
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      textArea.style.position = 'fixed';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        showFeedback();
+      } catch (err) {
+        console.error('Fallback copy failed: ', err);
+      }
+      document.body.removeChild(textArea);
+      window.location.href = 'mailto:' + email;
+    }
+  });
+
+  function showFeedback() {
+    const htmlLang = document.documentElement.getAttribute('lang') || 'tr';
+    const isTR = htmlLang === 'tr';
+    
+    const textSpan = emailBtn.querySelector('span');
+    if (!textSpan) return;
+    
+    const originalText = textSpan.textContent;
+    
+    emailBtn.style.pointerEvents = 'none';
+    textSpan.textContent = isTR ? 'Kopyalandı!' : 'Copied!';
+    
+    setTimeout(() => {
+      textSpan.textContent = originalText;
+      emailBtn.style.pointerEvents = '';
+    }, 2000);
+  }
 }
