@@ -12,7 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=12" />
 </head>
 
 <body>
@@ -108,8 +108,40 @@
           </div>
         </div>
       </div>
-   <div class="hero-visual">
+      <div class="hero-visual">
         <div class="avatar-wrapper">
+          <!-- 3D Glowing & Blinking Sims Mor Plumbob -->
+          <div class="plumbob-wrapper">
+            <div class="plumbob-3d">
+              <svg class="plumbob-svg" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pbTopLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f5d0fe" />
+                    <stop offset="100%" stop-color="#c084fc" />
+                  </linearGradient>
+                  <linearGradient id="pbTopRight" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#e879f9" />
+                    <stop offset="100%" stop-color="#9333ea" />
+                  </linearGradient>
+                  <linearGradient id="pbBotLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#a855f7" />
+                    <stop offset="100%" stop-color="#581c87" />
+                  </linearGradient>
+                  <linearGradient id="pbBotRight" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#7e22ce" />
+                    <stop offset="100%" stop-color="#3b0764" />
+                  </linearGradient>
+                </defs>
+                <!-- 3D Facets -->
+                <polygon points="30,2 5,42 30,48" fill="url(#pbTopLeft)" stroke="#f0abfc" stroke-width="1" />
+                <polygon points="30,2 55,42 30,48" fill="url(#pbTopRight)" stroke="#f0abfc" stroke-width="1" />
+                <polygon points="30,88 5,42 30,48" fill="url(#pbBotLeft)" stroke="#d8b4fe" stroke-width="1" />
+                <polygon points="30,88 55,42 30,48" fill="url(#pbBotRight)" stroke="#d8b4fe" stroke-width="1" />
+                <line x1="30" y1="2" x2="30" y2="88" stroke="#ffffff" stroke-width="1.5" opacity="0.6" />
+              </svg>
+            </div>
+            <div class="plumbob-light-beam"></div>
+          </div>
           <div class="avatar-glow"></div>
           <div class="avatar-ring ring-1">
             <span class="orbit-dot dot-1"></span>
@@ -121,12 +153,12 @@
           <div class="avatar-img-container popout-container">
             <div class="popout-circle"></div>
             <div class="popout-body-wrap">
-              <img src="assets/profile.jpg?v=2" alt="Irmak Ertaş" class="popout-img" />
+              <img src="assets/profile.jpg" alt="Irmak Ertaş" class="popout-img" />
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
     <div class="scroll-indicator">
       <div class="scroll-arrow"></div>
     </div>
@@ -422,7 +454,7 @@
 
 
 
-<!-- ========== EDUCATION ========== -->
+  <!-- ========== EDUCATION ========== -->
   <section class="section" id="education">
     <div class="container">
       <div class="section-header">
@@ -451,9 +483,9 @@
           <div class="timeline-card">
             <div class="timeline-badge complete" data-tr="Mezun" data-en="Graduated">Mezun</div>
             <h3 data-tr="Lise Eğitimim" data-en="High School">Lise Eğitimim</h3>
-          <p class="timeline-org" data-tr="Açık Öğretim" data-en="Distance Education">Açık Öğretim</p>
+            <p class="timeline-org" data-tr="Açık Öğretim" data-en="Distance Education">Açık Öğretim</p>
             <p class="timeline-date">2023 - 2024</p>
-          <p class="timeline-org" data-tr="Akev Koleji" data-en="Akev College">Akev Koleji</p>
+            <p class="timeline-org" data-tr="Akev Koleji" data-en="Akev College">Akev Koleji</p>
             <p class="timeline-date">2020 — 2023</p>
             <p class="timeline-desc"
               data-tr="Matematik, Türkçe ve sosyal bilimler alanlarında sağlam bir akademik temel oluşturdum. Üniversite sınavına hazırlanarak Akdeniz Üniversitesi YBS bölümünü kazandım."
@@ -486,10 +518,11 @@
         <!-- Play Store App -->
         <div class="project-card" data-category="mobile">
           <div class="project-img-wrap">
-            <img src="assets/neyesem_logo.png" alt="Ne Yesem? | Tarif Asistanı" class="project-img project-img-contain" />
+            <img src="assets/neyesem_logo.png" alt="Ne Yesem? | Tarif Asistanı"
+              class="project-img project-img-contain" />
             <div class="project-overlay">
-              <a href="https://play.google.com/store/apps/details?id=com.irmakertas.neyesem&amp;pli=1" class="proj-link" id="projLinkPlayStore" data-tr="Play Store'da Gör"
-                data-en="View on Play Store">
+              <a href="https://play.google.com/store/apps/details?id=com.irmakertas.neyesem&amp;pli=1" class="proj-link"
+                id="projLinkPlayStore" data-tr="Play Store'da Gör" data-en="View on Play Store">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -526,15 +559,14 @@
           <div class="project-img-wrap">
             <img src="assets/beta_hero.png" alt="Beta İnşaat Web Projesi" class="project-img" />
             <div class="project-overlay">
-              <a href="#" class="proj-link open-modal-btn" id="projLinkWeb1"
-                 data-title-tr="Beta İnşaat Web Projesi"
-                 data-title-en="Beta İnşaat Web Project"
-                 data-desc-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır."
-                 data-desc-en="I developed a dynamic corporate website from scratch for Beta Construction, reflecting its professional identity. The project includes a custom-built admin panel enabling the company to instantly update its ongoing and completed projects, photo galleries, and corporate information without external dependency."
-                 data-features-tr="Özel Yönetim (Admin) Paneli,Dinamik Proje Ekleme/Düzenleme,Kurumsal Fotoğraf Galerisi,Responsive Tasarım ve SEO Uyumu"
-                 data-features-en="Custom Content Management Panel,Dynamic Project Creation/Editing,Corporate Photo Gallery,Responsive Design & SEO Friendly"
-                 data-images="assets/beta_hero.png,assets/beta_about.png,assets/beta_sectors.png,assets/beta_project.png,assets/beta_footer.png,assets/beta_admin_login.png,assets/beta_admin_dashboard.png"
-                 data-tech="HTML,CSS,JavaScript">
+              <a href="#" class="proj-link open-modal-btn" id="projLinkWeb1" data-title-tr="Beta İnşaat Web Projesi"
+                data-title-en="Beta İnşaat Web Project"
+                data-desc-tr="Beta İnşaat firması için kurumsal kimliği yansıtacak şekilde sıfırdan geliştirdiğim dinamik web projesi. Proje kapsamında, firmanın devam eden ve tamamlanan projelerini, fotoğraf galerilerini ve kurumsal bilgilerini dışa bağımlı kalmadan anlık olarak güncelleyebilmesi için özel bir yönetim (admin) paneli inşa ettim. State (durum) yönetimi, dinamik veri akışı ve kullanıcı dostu bir içerik yönetim sistemi kurma konularında uçtan uca çözümler ürettiğim ticari bir çalışmadır."
+                data-desc-en="I developed a dynamic corporate website from scratch for Beta Construction, reflecting its professional identity. The project includes a custom-built admin panel enabling the company to instantly update its ongoing and completed projects, photo galleries, and corporate information without external dependency."
+                data-features-tr="Özel Yönetim (Admin) Paneli,Dinamik Proje Ekleme/Düzenleme,Kurumsal Fotoğraf Galerisi,Responsive Tasarım ve SEO Uyumu"
+                data-features-en="Custom Content Management Panel,Dynamic Project Creation/Editing,Corporate Photo Gallery,Responsive Design & SEO Friendly"
+                data-images="assets/beta_hero.png,assets/beta_about.png,assets/beta_sectors.png,assets/beta_project.png,assets/beta_footer.png,assets/beta_admin_login.png,assets/beta_admin_dashboard.png"
+                data-tech="HTML,CSS,JavaScript">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -570,14 +602,13 @@
             </div>
             <div class="project-overlay">
               <a href="#" class="proj-link open-modal-btn" id="projLinkWeb2"
-                 data-title-tr="Business Hub E-Ticaret Projesi"
-                 data-title-en="Business Hub E-Commerce Project"
-                 data-desc-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
-                 data-desc-en="This is a portfolio project I built from scratch to experience the full range of dynamic processes involved in an e-commerce platform, such as product listing, shopping cart interactions, and user management. It is a project where I integrated backend and frontend architectures to gain end-to-end experience in state management and database integration for a real-world web application."
-                 data-features-tr="Dinamik Sepet ve Sipariş Süreçleri,Ürün Arama ve Kategori Filtreleme,Veritabanı Entegrasyonu,Modern State (Durum) Yönetimi"
-                 data-features-en="Dynamic Cart & Checkout Flow,Product Search & Category Filters,Database Integration,Modern State Management"
-                 data-tech="React,Node.js,SQL"
-                 data-images="assets/business.png,assets/business2.png,assets/businessadmin1.png,assets/businessadmin2.png,assets/businessadmin3.png">
+                data-title-tr="Business Hub E-Ticaret Projesi" data-title-en="Business Hub E-Commerce Project"
+                data-desc-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
+                data-desc-en="This is a portfolio project I built from scratch to experience the full range of dynamic processes involved in an e-commerce platform, such as product listing, shopping cart interactions, and user management. It is a project where I integrated backend and frontend architectures to gain end-to-end experience in state management and database integration for a real-world web application."
+                data-features-tr="Dinamik Sepet ve Sipariş Süreçleri,Ürün Arama ve Kategori Filtreleme,Veritabanı Entegrasyonu,Modern State (Durum) Yönetimi"
+                data-features-en="Dynamic Cart & Checkout Flow,Product Search & Category Filters,Database Integration,Modern State Management"
+                data-tech="React,Node.js,SQL"
+                data-images="assets/business.png,assets/business2.png,assets/businessadmin1.png,assets/businessadmin2.png,assets/businessadmin3.png">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -595,7 +626,10 @@
             <p class="project-desc"
               data-tr="Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır."
               data-en="This is a portfolio project I built from scratch to experience the full range of dynamic processes involved in an e-commerce platform, such as product listing, shopping cart interactions, and user management. It is a project where I integrated backend and frontend architectures to gain end-to-end experience in state management and database integration for a real-world web application.">
-              Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend mimarisini bir arada harmanladığım bir çalışmadır.
+              Bir e-ticaret platformunun tüm dinamik süreçlerini (ürün listeleme, sepet etkileşimleri ve kullanıcı
+              yönetimi) deneyimlemek için sıfırdan inşa ettiğim portfolyo projem. Gerçek bir web uygulamasının state
+              (durum) yönetimini ve veritabanı entegrasyonunu uçtan uca tecrübe etmek adına backend ve frontend
+              mimarisini bir arada harmanladığım bir çalışmadır.
             </p>
             <div class="project-tech">
               <span>HTML</span>
@@ -612,14 +646,13 @@
             <img src="assets/spacesurvivor_preview.jpg" alt="Space Survivor" class="project-img" />
             <div class="project-overlay">
               <a href="#" class="proj-link open-modal-btn" id="projLinkGame"
-                 data-title-tr="Space Survivor — 2D Oyun Projesi"
-                 data-title-en="Space Survivor — 2D Game Project"
-                 data-desc-tr="Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu."
-                 data-desc-en="A 2D survival game built using Java and LibGDX framework to master game loop concepts, collision detection mechanisms, real-time score tracking, and persistent high scores. Working close to bare-metal game engine architectures provided deep knowledge of asset loading and game state management."
-                 data-images="assets/spacesurvivor_preview.jpg,assets/spacesurvivor_gameover.jpg"
-                 data-features-tr="Sonsuz Uzay Temalı Hayatta Kalma Döngüsü,Gelişmiş Çarpışma Algılama (Collision Detection),High Score Kayıt ve Yükleme Sistemi,LibGDX Asset Yöneticisi Entegrasyonu"
-                 data-features-en="Infinite Space Survival Loop,Collision Detection System,High Score Serialization,LibGDX Asset Manager Integration"
-                 data-tech="Java,LibGDX">
+                data-title-tr="Space Survivor — 2D Oyun Projesi" data-title-en="Space Survivor — 2D Game Project"
+                data-desc-tr="Java ve LibGDX ile geliştirdiğim, oyun programlama mantığını kavradığım ilk 2D oyun projem: Space Survivor. Sonsuz uzay temalı bu hayatta kalma oyununda; optimize edilmiş bir oyun döngüsü (game loop), çarpışma algılama mantığı, anlık skor takibi ve high score sistemi yer alıyor. Sıfırdan bir oyun motoru mimarisiyle çalışarak asset yönetimini ve oyun içi durum (state) kontrollerini deneyimlediğim vizyoner bir çalışma oldu."
+                data-desc-en="A 2D survival game built using Java and LibGDX framework to master game loop concepts, collision detection mechanisms, real-time score tracking, and persistent high scores. Working close to bare-metal game engine architectures provided deep knowledge of asset loading and game state management."
+                data-images="assets/spacesurvivor_preview.jpg,assets/spacesurvivor_gameover.jpg"
+                data-features-tr="Sonsuz Uzay Temalı Hayatta Kalma Döngüsü,Gelişmiş Çarpışma Algılama (Collision Detection),High Score Kayıt ve Yükleme Sistemi,LibGDX Asset Yöneticisi Entegrasyonu"
+                data-features-en="Infinite Space Survival Loop,Collision Detection System,High Score Serialization,LibGDX Asset Manager Integration"
+                data-tech="Java,LibGDX">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   <polyline points="15 3 21 3 21 9" />
@@ -666,14 +699,16 @@
             ulaşabilirsiniz.
           </p>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/irmakertas/" target="_blank" rel="noopener noreferrer" class="social-btn" id="socialLinkedIn" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/irmakertas/" target="_blank" rel="noopener noreferrer"
+              class="social-btn" id="socialLinkedIn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
                 <circle cx="4" cy="4" r="2" />
               </svg>
               LinkedIn
             </a>
-            <a href="https://github.com/iirmakertas" target="_blank" rel="noopener noreferrer" class="social-btn" id="socialGithub" aria-label="GitHub">
+            <a href="https://github.com/iirmakertas" target="_blank" rel="noopener noreferrer" class="social-btn"
+              id="socialGithub" aria-label="GitHub">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path
                   d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />

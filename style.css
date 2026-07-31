@@ -633,6 +633,53 @@ img {
   justify-content: center;
 }
 
+/* ---- 3D ANIMATED MOR PLUMBOB (SIMS CRYSTAL) — güncellenmiş ---- */
+.plumbob-wrapper {
+  position: absolute;
+  top: -2px;           
+  left: 52%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 400px;
+}
+
+.plumbob-3d {
+  width: 70px;     
+  height: 70px;             
+  transform-style: preserve-3d;
+  animation: plumbobFloat 2.4s ease-in-out infinite,
+             plumbobSpin3D 5s linear infinite,
+             plumbobBlinkGlow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes plumbobFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }   /* -12px yerine */
+}
+
+@keyframes plumbobBlinkGlow {
+  0% {
+    filter: drop-shadow(0 0 3px #c084fc) drop-shadow(0 0 8px rgba(124, 92, 252, 0.6));
+    opacity: 0.85;
+  }
+  40% {
+    filter: drop-shadow(0 0 10px #c084fc) drop-shadow(0 0 18px #7c5cfc);
+    opacity: 1;
+  }
+  60% {
+    filter: drop-shadow(0 0 2px #a855f7) drop-shadow(0 0 5px rgba(124, 92, 252, 0.35));
+    opacity: 0.5;
+  }
+  100% {
+    filter: drop-shadow(0 0 8px #c084fc) drop-shadow(0 0 14px #7c5cfc);
+    opacity: 0.95;
+  }
+}
+
 /* Ambient glow behind the avatar */
 .avatar-glow {
   position: absolute;
