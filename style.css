@@ -1682,6 +1682,15 @@ img {
     width: 260px;
     height: 260px;
   }
+  
+  .plumbob-wrapper {
+    top: 2px;
+  }
+
+  .plumbob-3d {
+    width: 48px;
+    height: 48px;
+  }
 
   .avatar-glow {
     width: 220px;
