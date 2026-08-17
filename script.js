@@ -416,14 +416,26 @@ function initProjectModal() {
 
       if (currentImages.length > 0) {
         currentImages.forEach(src => {
-          const img = document.createElement('img');
-          img.src = src;
-          img.alt = mTitle.textContent;
-          img.style.width = '100%';
-          img.style.height = 'auto';
-          img.style.display = 'block';
-          img.style.objectFit = 'normal';
-          mSlider.appendChild(img);
+          const isVideo = src.toLowerCase().endsWith('.mp4') || src.toLowerCase().endsWith('.webm') || src.toLowerCase().endsWith('.ogg');
+          if (isVideo) {
+            const video = document.createElement('video');
+            video.src = src;
+            video.controls = true;
+            video.playsInline = true;
+            video.style.width = '100%';
+            video.style.height = 'auto';
+            video.style.display = 'block';
+            mSlider.appendChild(video);
+          } else {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = mTitle.textContent;
+            img.style.width = '100%';
+            img.style.height = 'auto';
+            img.style.display = 'block';
+            img.style.objectFit = 'normal';
+            mSlider.appendChild(img);
+          }
         });
         mArrows.style.display = currentImages.length > 1 ? 'flex' : 'none';
       } else {
@@ -469,6 +481,11 @@ function initProjectModal() {
   function updateSliderPosition() {
     mSlider.style.transform = `translateX(-${currentImageIdx * 100}%)`;
     mSlider.style.transition = 'transform 0.4s ease';
+    
+    // Pause all videos when slide changes
+    mSlider.querySelectorAll('video').forEach(video => {
+      video.pause();
+    });
   }
 
   // Close modal function
@@ -476,6 +493,11 @@ function initProjectModal() {
     modal.classList.remove('active');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = ''; // Unlock scroll
+    
+    // Pause all videos when modal closes
+    mSlider.querySelectorAll('video').forEach(video => {
+      video.pause();
+    });
   }
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
